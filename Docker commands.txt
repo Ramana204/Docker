@@ -76,11 +76,11 @@ COMMANDS
 
 Create container from our own custom image
 ----------------------------------------------
-1. dockr run --name ramcontainer -it ubuntu //bin/bash
-2. create a file by inside container 
+1. docker run --name ramcontainer -it ubuntu //bin/bash
+2. create a file in inside container 
 3. create image from container by using below command
    ( docker commit <cont id> <imagename>:tag )
-4. now check the images
+4. now check the images (docker images)
 5. create container from our image
    ( docker run -it --name ranjitcontainer <custom image> //bin/bash 
 6. now go and check inside ranjit container the file will be available
