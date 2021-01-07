@@ -177,9 +177,19 @@ run jenkins in a container to use the volume concept
 docker run --name MyJenkins1 -v myvol1:/var/jenkins_home -p 8080:8080 -p 50000:50000 jenkins/jenkins:lts
 docker run --name MyJenkins2 -v myvol1:/var/jenkins_home -p 9090:8080 -p 60000:50000 jenkins/jenkins:lts
 
+version : "3"
+services:
+  web:
+    image: "nginx:latest"
+    ports:
+    - "80-85:80"
 
 
-   
+
+
+
+
+docker-compose up -d --scale web=5
 
 
 
